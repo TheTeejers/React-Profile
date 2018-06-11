@@ -1,0 +1,47 @@
+/*second letter animation Projects*/
+/*P*/
+.letterLineProjects0201, .letterLineProjects0202, .letterLineProjects0203, .letterLineProjects0207, .letterLineProjects0208, .letterLineProjects0209, .letterLineProjects0210{
+  animation: flickr .02s ease-in-out .0003s 8 alternate both;
+}
+
+/*third letter animation Projects*/
+/*R*/
+.letterLineProjects0301, .letterLineProjects0302, .letterLineProjects0303, .letterLineProjects0307, .letterLineProjects0308, .letterLineProjects0309, .letterLineProjects0310, .letterLineProjects0313 {
+  animation: flickr .03s ease-in-out .0014s 20 alternate both;
+}
+
+/*fourth letter animation Projects*/
+/*O*/
+.letterLineProjects0401, .letterLineProjects0402, .letterLineProjects0403, .letterLineProjects0407, .letterLineProjects0410, .letterLineProjects0414, .letterLineProjects0415, .letterLineProjects0416 {
+  animation: flickr .005s ease-in-out .0005s 96 alternate both;
+}
+
+/*fifth letter animation Projects*/
+/*J*/
+.letterLineProjects0501, .letterLineProjects0502, .letterLineProjects0505, .letterLineProjects0510, .letterLineProjects0512, .letterLineProjects0515 {
+  animation: flickr .004s ease-in-out .0001s 126 alternate both;
+}
+
+/*sixth letter animation Projects*/
+/*E*/
+.letterLineProjects0601, .letterLineProjects0602, .letterLineProjects0603, .letterLineProjects0608, .letterLineProjects0610, .letterLineProjects0615, .letterLineProjects0616 {
+  animation: flickr .09s ease-in-out .0009s 6 alternate both;
+}
+
+/*seventh letter animation Projects*/
+/*C*/
+.letterLineProjects0701, .letterLineProjects0702, .letterLineProjects0703, .letterLineProjects0710, .letterLineProjects0715, .letterLineProjects0716 {
+  animation: flickr .055s ease-in-out .025s 12 alternate both;
+}
+
+/*eighth letter animation Projects*/
+/*T*/
+.letterLineProjects0801, .letterLineProjects0802, .letterLineProjects0805, .letterLineProjects0812{
+  animation: flickr .005s ease-in-out .02s 194 alternate both;
+}
+
+/*ninth letter animation Projects*/
+/*S*/
+.letterLineProjects0901, .letterLineProjects0902, .letterLineProjects0903, .letterLineProjects0908, .letterLineProjects0909, .letterLineProjects0914, .letterLineProjects0915, .letterLineProjects0916 {
+  animation: flickr .01s ease-in-out 0.009s 106 alternate both;
+}

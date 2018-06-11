@@ -1,0 +1,66 @@
+
+
+
+
+/*First letter animation Resume*/
+/*R*/
+.letterLineResume0301, .letterLineResume0302, .letterLineResume0303, .letterLineResume0307, .letterLineResume0308, .letterLineResume0309, .letterLineResume0310, .letterLineResume0313 {
+  animation: flickr .03s ease-in-out .0014s 18 alternate both;
+}
+
+/*fourth letter animation Resume*/
+/*E*/
+.letterLineResume0401, .letterLineResume0402, .letterLineResume0403, .letterLineResume0408, .letterLineResume0410, .letterLineResume0415, .letterLineResume0416 {
+  animation: flickr .005s ease-in-out .0005s 88 alternate both;
+}
+
+/*fifth letter animation Resume*/
+/*S*/
+.letterLineResume0501, .letterLineResume0502, .letterLineResume0503, .letterLineResume0508, .letterLineResume0509, .letterLineResume0514, .letterLineResume0515, .letterLineResume0516 {
+  animation: flickr .004s ease-in-out .0001s 144 alternate both;
+}
+
+/*sixth letter animation Resume*/
+/*U*/
+.letterLineResume0603, .letterLineResume0607, .letterLineResume0610,.letterLineResume0614, .letterLineResume0615,.letterLineResume0616 {
+  animation: flickr .09s ease-in-out .0009s 6 alternate both;
+}
+
+/*seventh letter animation Resume*/
+/*M*/
+.letterLineResume0703, .letterLineResume0704, .letterLineResume0706, .letterLineResume0707, .letterLineResume0710, .letterLineResume0714 {
+  animation: flickr .055s ease-in-out .025s 12 alternate both;
+}
+
+/*eighth letter animation Resume*/
+/*E*/
+.letterLineResume0801, .letterLineResume0802, .letterLineResume0803, .letterLineResume0808, .letterLineResume0810, .letterLineResume0815, .letterLineResume0816 {
+  animation: flickr .005s ease-in-out .02s 224 alternate both;
+}
+
+
+@keyframes flickr {
+  35%, 37%, 39%, 41%, 100% {
+    background: #272d34;
+    border-color: #272d34;
+    box-shadow: 0px 0px 0px 0px #272d34;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: #F1F4F5;
+    border-color: #F1F4F5;
+    box-shadow: 0px 0px 15px 3px #18E5BC;
+
+
+  }
+}
+
+@keyframes letters {
+  35%, 37%, 39%, 41%, 100% {
+    color: #F1F4F5;
+    text-shadow: 0px 0px 45px #18E5BC;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    color: #272d34;
+    text-shadow: 0px 0px 0px #272d34;
+  }
+}
