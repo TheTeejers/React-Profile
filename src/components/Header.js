@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from '../App.js';
-import Resume from './Resume.js';
-import Projects from './Projects.js';
-import About from './About.js';
-import Contact from './Contact.js';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import Home from '../App.js';
+// import Resume from './Resume.js';
+// import Projects from './Projects.js';
+// import About from './About.js';
+// import Contact from './Contact.js';
 // import NeonLetters from './NeonLetters.js';
 // import './NeonLetters.css';
 import './Header.css';
@@ -21,7 +21,6 @@ class Header extends Component {
             <div className="headerLinks headerLinksInactive"><a href="./Contact">CONTACT</a></div>
             <button className="hamburger">&#9776;</button>
         </header>
-
         <div className="menu">
           <ul>
             <a href="./resume.html"><li>RESUME</li></a>
@@ -30,17 +29,6 @@ class Header extends Component {
             <a href="./contact.html"><li>CONTACT</li></a>
           </ul>
         </div>
-        <Router>
-          <div className='Home'>
-            {/* <Route exact path='/' component={ () => <Home /> } /> */}
-            <Route path='/Home' component={ () => <Home /> } />
-            <Route path='/Resume' component={ () => <Resume /> } />
-            <Route path='/Projects' component={ () => <Projects /> } />
-            <Route path='/About' component={ () => <About /> } />
-            <Route path='/Contact' component={ () => <Contact /> } />
-          </div>
-        </Router>
-
       </div>
     )
   }

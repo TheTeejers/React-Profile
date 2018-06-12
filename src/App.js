@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+// import { BrowserRouter as Router, Route} from 'react-router-dom';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import Main from './components/Main.js'
@@ -14,9 +14,6 @@ class App extends Component {
       <div className="App">
         <Header />
         <Main />
-
-
-
         <Footer />
       </div>
     );
