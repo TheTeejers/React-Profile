@@ -104,7 +104,7 @@ class Projects extends Component {
                 This was a fun project for me to work on.  My pride and joy of this adventure was the Images page.  I set up the page and the ability to download a .zip file of the selected images.
               </p>
               <p className="projectParagraph">
-                Take a tour of the site <a className='projectTag' href="./static-site/" target='blank'>here!</a>
+                Take a tour of the site <a className='projectTag' href="./static-site/index.html" target='blank'>here!</a>
               </p>
             </div>
           </Slide>
