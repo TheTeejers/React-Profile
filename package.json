@@ -2,7 +2,7 @@
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://TheTeejers.github.io/React-Profile/",
+  "homepage": "https://TheTeejers.github.io",
   "dependencies": {
     "firebase": "^5.4.2",
     "react": "^16.4.0",
@@ -21,5 +21,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
   }
 }
