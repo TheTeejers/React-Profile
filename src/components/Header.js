@@ -1,12 +1,4 @@
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from '../App.js';
-// import Resume from './Resume.js';
-// import Projects from './Projects.js';
-// import About from './About.js';
-// import Contact from './Contact.js';
-// import NeonLetters from './NeonLetters.js';
-// import './NeonLetters.css';
 import './Header.css';
 
 class Header extends Component {

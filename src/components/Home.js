@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Roll from 'react-reveal/Roll';
-import HeadShake from 'react-reveal/HeadShake'
 import makeCarousel from 'react-reveal/makeCarousel';
 import Slide from 'react-reveal/Slide';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import './Home.css';
 
 
