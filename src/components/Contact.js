@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NeonLettersContact from './NeonLettersContact.js';
-import './NeonLetters.css';
 import './Contact.css';
 
 class Contact extends Component {
   render() {
     return (
       <div className="App">
-        <NeonLettersContact />
         <div className="contactInfo">
           <div className="alert">YOUR MESSAGE HAS BEEN SENT</div>
           <li>EMAIL:<a className='mailLink' href="mailto:tjcancode@gmail.com?subject=I%20saw%20your%20website%20and%20would%20like%20to%20chat!">TJCANCODE@GMAIL.COM</a></li>

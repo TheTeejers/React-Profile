@@ -8,13 +8,16 @@ header {
   left: 5%;
   background-color: #272d34;
   z-index: 1;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .hamburger, .menu {
   visibility: hidden;
 }
 
+.App-header {
+  height: 75px;
+}
 
 
 .headerName, .headerNameOn {
@@ -90,6 +93,7 @@ header {
     position: absolute;
     text-align: center;
     margin-top: 5px;
+    height:10px;
 
   }
 

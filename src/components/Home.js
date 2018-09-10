@@ -1,35 +1,101 @@
 import React, { Component } from 'react';
-import image2 from './images/image2.jpg';
-import tictactoe_screenshot from './images/tictactoe_screenshot.png';
-import image3 from './images/image3.jpg';
-import pupfetcher_screenshot2 from './images/pupfetcher_screenshot2.png';
-import image1 from './images/image1.jpg';
-import ufhome_screenshot4 from './images/ufhome_screenshot4.png';
+import Roll from 'react-reveal/Roll';
+import HeadShake from 'react-reveal/HeadShake'
+import makeCarousel from 'react-reveal/makeCarousel';
+import Slide from 'react-reveal/Slide';
+import styled, { css } from 'styled-components';
 import './Home.css';
 
 
+const Container = styled.div`
+  ${'' /* border: 1px solid red; */}
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 7em;
+`;
+
+
+const CarouselUI = ({ children }) => <Container>{children}</Container>;
+const Carousel = makeCarousel(CarouselUI);
+
+
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { show: true };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({ show: !this.state.show });
+  }
+
+
+
   render() {
     return (
       <div className="Home">
 
         <div className="FSWD">
-          <button className='leftButton' onClick='rotate(-1)'>&#10094</button>
-          Full Stack Web Developer
-          <button className='rightButton' onClick='rotate(1)'>&#10095</button>
+          <Roll top cascade>
+            <h1>Full Stack</h1>
+          </Roll>
+          <Roll bottom cascade>
+            <h1>Web Developer</h1>
+          </Roll>
         </div>
-        <div className="imageSelectorSection">
-          <div className='slideshowSection'>
+        <Carousel forever defaultWait={2500}>
+          <Slide count='0' right>
             <div>
-              <div className='item'><a href="./about.html"><img className='image1' src={image2} alt='image1 tjloughry'/></a></div>
-              <div className='item'><a href="./projects.html"><img className='image2' src={tictactoe_screenshot} alt='image2 tjloughry'/></a></div>
-              <div className='item'><a href="./about.html"><img className='image3' src={image3} alt='image3 tjloughry'/></a></div>
-              <div className='item'><a href="./projects.html"><img className='image4' src={pupfetcher_screenshot2} alt='image4 tjloughry'/></a></div>
-              <div className='item'><a href="./about.html"><img className='image5' src={image1} alt='image5 tjloughry'/></a></div>
-              <div className='item'><a href="./projects.html"><img className='image6' src={ufhome_screenshot4} alt='image6 tjloughry'/></a></div>
+              <h1> </h1>
             </div>
-          </div>
-        </div>
+          </Slide>
+          <Slide wait={2500} left>
+            <Roll left cascade>
+              <h1 className="FSWD">HTML</h1>
+            </Roll>
+          </Slide>
+          <Slide right>
+            <Roll right cascade>
+              <h1 className="FSWD">CSS</h1>
+            </Roll>
+          </Slide>
+          <Slide left>
+            <Roll left cascade>
+              <h1 className="FSWD">JavaScript</h1>
+            </Roll>
+          </Slide>
+          <Slide right>
+            <Roll right cascade>
+              <h1 className="FSWD">React.js</h1>
+            </Roll>
+          </Slide>
+          <Slide left>
+            <Roll left cascade>
+              <h1 className="FSWD">Node.js</h1>
+            </Roll>
+          </Slide>
+          <Slide right>
+            <Roll right cascade>
+              <h1 className="FSWD">WordPress</h1>
+            </Roll>
+          </Slide>
+          <Slide left>
+            <Roll left cascade>
+              <h1 className="FSWD">NGNX</h1>
+            </Roll>
+          </Slide>
+          <Slide right>
+            <Roll right cascade>
+              <h1 className="FSWD">Express</h1>
+            </Roll>
+          </Slide>
+          <Slide left>
+            <Roll left cascade>
+              <h1 className="FSWD">MongoDB</h1>
+            </Roll>
+          </Slide>
+        </Carousel>
       </div>
     );
   }

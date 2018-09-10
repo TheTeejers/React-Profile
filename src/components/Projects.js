@@ -1,25 +1,93 @@
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NeonLettersProjects from './NeonLettersProjects.js';
-import './NeonLetters.css';
+import makeCarousel from 'react-reveal/makeCarousel';
+import Slide from 'react-reveal/Slide';
+import styled, { css } from 'styled-components';
 import './Projects.css';
 import hackathon_resources_screenshot from './images/hackathon_resources_screenshot.PNG';
 import ufhome_screenshot4 from './images/ufhome_screenshot4.png';
 import pupfetcher_screenshot2 from './images/pupfetcher_screenshot2.png';
 import fooddice_screenshot from './images/fooddice_screenshot.png';
 import tictactoe_screenshot from './images/tictactoe_screenshot.png';
-import './projectCardAnimation.css';
+// import './projectCardAnimation.css';
+
+const width = '100%', height='100vh';
+const Container = styled.div`
+  position: relative;
+  overflow: inherit;
+  z-index: 0;
+  margin-bottom: 175px;
+
+`;
+const Children  = styled.div`
+  width: ${width};
+  ${'' /* position: relative; */}
+  height: ${height};
+  margin-bottom: 100px;
+`;
+const Arrow = styled.div`
+  text-shadow: 2px 2px 4px #18E5BC;
+  color: white;
+  z-index: 100;
+  line-height: ${height};
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 10%;
+  font-size: 3em;
+  cursor: pointer;
+  user-select: none;
+  ${props => props.right ? css`left: 90%;` : css`left: 0%;`}
+`;
+const Dot = styled.div`
+  display: inline-block;
+  color: #18E5BC;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px #18E5BC;
+  user-select: none;
+`;
+const Dots = styled.div`
+  text-align: center;
+  width: ${width};
+  z-index: -10;
+  ${'' /* overflow: visible; */}
+  position:static;
+  margin: auto;
+`;
+const CarouselUI = ({ position, total, handleClick, children }) => (
+  <div>
+    <Dots>
+      {Array(...Array(total)).map( (val, index) =>
+        <Dot key={index} onClick={handleClick} data-position={index}>
+          {index === position ? '● ' : '○ ' }
+        </Dot>
+      )}
+    </Dots>
+  <Container>
+    <Arrow onClick={handleClick} data-position={position - 1}>{'<'}</Arrow>
+    <Children>
+      {children}
+    </Children>
+    <Arrow right onClick={handleClick} data-position={position + 1}>{'>'}</Arrow>
+  </Container>
+</div>
+);
+const Carousel = makeCarousel(CarouselUI);
+
+
+
 
 class Projects extends Component {
   render() {
     return (
       <div className="App">
-        <NeonLettersProjects />
-        <div className="projectsContainer">
-
-          <div className="projectDisplayContainer">
-
-            <div className="project4Back back appInfo">
+        <Carousel maxTurns={0}>
+          <Slide className='slideProject' right>
+            <div className='projectSlide'>
+              <h1 className="FSWD">HACKATHON RESOURCES</h1>
+              <div className="projectImage">
+                <img className='hackathonImage' src={hackathon_resources_screenshot} alt='hackathon resources'/>
+              </div>
               <p className="projectParagraph">
                 This Project was to simply set up a starting point for a future site for a former employer.  I was given free range on how to set up the site.  The idea of the site is to give participants quick access to resources to use in the projects.
               </p>
@@ -38,13 +106,14 @@ class Projects extends Component {
               <p className="projectParagraph">
                 Take a tour of the site <a className='projectTag' href="./static-site/" target='blank'>here!</a>
               </p>
-
             </div>
-            <div className="project4Front front"><img className='hackathonImage' src={hackathon_resources_screenshot} alt='hackathon resources'/></div>
-          </div>
-
-          <div className="projectDisplayContainer">
-            <div className="project1Back back appInfo">
+          </Slide>
+          <Slide className='slideProject' right>
+            <div className='projectSlide'>
+              <h1 className="FSWD">UFHome</h1>
+              <div className="projectImage">
+                <img className='ufhomeImage' src={ufhome_screenshot4} alt='UFHome'/>
+              </div>
               <p className="projectParagraph">
                 UFHome was my final project for General Assembly.  It was a solo project that I came up with, designed, and developed on my own.  We were given free range to come up with whatever we wanted to in order to showcase our skills.
               </p>
@@ -58,12 +127,13 @@ class Projects extends Component {
                 Take a tour of the site <a className='projectTag' href="https://ufhome.herokuapp.com/" target='blank'>here!</a> See if you can find the Easter Eggs!
               </p>
             </div>
-            <div className="project1Front front"><img className='ufhomeImage' src={ufhome_screenshot4} alt='UFHome'/></div>
-          </div>
-
-
-          <div className="projectDisplayContainer">
-            <div className="project2Back back appInfo">
+          </Slide>
+          <Slide className='slideProject' right>
+            <div className='projectSlide'>
+              <h1 className="FSWD">PUPFETCHER</h1>
+              <div className="projectImage">
+                <img className='pupfetcherImage' src={pupfetcher_screenshot2} alt='Pupfetcher'/>
+              </div>
               <p className="projectParagraph">
                 Pupfetcher was the first group project we did at General Assembly.  Our group was comprised of a total of four students.  We were expected to follow these requirements:
               </p>
@@ -81,16 +151,14 @@ class Projects extends Component {
               <p className="projectParagraph">
                 Other than that, we were to come up with, design, and develop the app as we saw fit.  We decided to let people search for dogs in shelters in their area!  We were very proud of our idea and product!
               </p>
-              <p className="projectParagraph">
-                Take a tour of the site <a className='projectTag' href="https://pupfetchrs.herokuapp.com/" target='blank'>here!</a>
-              </p>
             </div>
-            <div className="project2Front front"><img className='pupfetcherImage' src={pupfetcher_screenshot2} alt='Pupfetcher'/></div>
-          </div>
-
-
-          <div className="projectDisplayContainer">
-            <div className="project3Back back appInfo">
+          </Slide>
+          <Slide className='slideProject' right>
+            <div className='projectSlide'>
+              <h1 className="FSWD">FOODDICE</h1>
+              <div className="projectImage">
+                <img className='fooddiceImage' src={fooddice_screenshot} alt='FoodDice'/>
+              </div>
               <p className="projectParagraph">
                 FoodDice was our second group project. Our group was comprised of a total of four students from the web development immersive class. We were given one week to come up with an idea and develop the web app using React.
               </p>
@@ -104,12 +172,13 @@ class Projects extends Component {
                 Take a tour of the site <a className='projectTag' href="https://food-dice.herokuapp.com/" target='blank'>here!</a>
               </p>
             </div>
-            <div className="project3Front front"><img className='fooddiceImage' src={fooddice_screenshot} alt='FoodDice'/></div>
-          </div>
-
-
-          <div className="projectDisplayContainer bottomProject">
-            <div className="project4Back back appInfo">
+          </Slide>
+          <Slide className='slideProject' right>
+            <div className='projectSlide'>
+              <h1 className="FSWD">TIC TAC TOE</h1>
+              <div className="projectImage">
+                <img className='tictactoeImage' src={tictactoe_screenshot} alt='tictactoe'/>
+              </div>
               <p className="projectParagraph">
                 The Tic-Tac-Toe project was the first project in the General Assembly course.  It was, at the time, a very daunting task.  We had a Friday through the weekend to complete the task.  The requirements were as follows:
               </p>
@@ -136,14 +205,9 @@ class Projects extends Component {
                 Take a tour of the site <a className='projectTag' href="./tictactoe.html" target='blank'>here!</a> See if you can find the Easter Eggs!
               </p>
             </div>
-            <div className="project4Front front"><img className='tictactoeImage' src={tictactoe_screenshot} alt='tictactoe'/></div>
-          </div>
-
-
-        </div>
-
-        </div>
-      // </div>
+          </Slide>
+        </Carousel>
+      </div>
     );
   }
 }
