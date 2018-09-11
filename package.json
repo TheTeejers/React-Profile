@@ -2,7 +2,7 @@
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://TheTeejers.github.io/React-Profile/",
+  "homepage": "https://tjloughry.com",
   "dependencies": {
     "firebase": "^5.4.2",
     "react": "^16.4.0",
