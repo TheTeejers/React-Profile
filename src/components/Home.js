@@ -44,7 +44,7 @@ class Home extends Component {
           </Roll>
         </div>
         <Carousel forever defaultWait={2500}>
-          <Slide count='0' right>
+          <Slide right>
             <div>
               <h1> </h1>
             </div>
