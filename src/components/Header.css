@@ -8,7 +8,6 @@ header {
   left: 5%;
   background-color: #272d34;
   z-index: 1;
-  /* margin-bottom: 10px; */
 }
 
 .hamburger, .menu {
@@ -78,10 +77,6 @@ header {
     width: 0px;
     margin: 0px;
   }
-
-  /* header {
-    margin-bottom: 30px;
-  } */
 
   .menu {
     visibility: visible;
