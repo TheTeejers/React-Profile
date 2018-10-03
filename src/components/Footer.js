@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Footer.css';
 import twitterIcon from './images/twitter.png';
 import githubIcon from './images/github.png';
 import linkedinIcon from './images/linkedin.png';

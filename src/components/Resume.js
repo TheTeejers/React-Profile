@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './Resume.css';
 import Roll from 'react-reveal/Roll'
 import Slide from 'react-reveal/Slide';
 import resumePDF from './TJLoughryDevResume.pdf';

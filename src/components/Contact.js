@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Roll from 'react-reveal/Roll'
 import Slide from 'react-reveal/Slide';
 import firebase from './firebase.js'
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './Contact.css';
 
 class Contact extends Component {
   constructor() {
